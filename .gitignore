@@ -1,0 +1,15 @@
+# 绝不入库：登录态 / 采集快照 / 本地缓存
+*browser_state*.json
+*storage_state*.json
+*capture*.json
+*cookies*
+.env
+tmp/
+raw/
+out/
+output/
+.venv/
+__pycache__/
+*.mp4
+*.m4a
+*.wav

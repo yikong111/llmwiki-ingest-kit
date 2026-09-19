@@ -1,0 +1,24 @@
+{
+  "name": "llmwiki-media-ingest",
+  "version": "0.2.1",
+  "description": "Route web, video, Douyin, WeChat Channels share links, transcripts, and local media into an LLMwiki workflow.",
+  "author": {
+    "name": "Yikong local Codex"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LLMwiki Media Ingest",
+    "shortDescription": "Route web, video, Douyin, and WeChat Channels sources into LLMwiki.",
+    "longDescription": "Adds source routing plus user-authorized WeChat Channels share-link collection through a local desktop WeChat downloader, then hands artifacts to the existing LLMwiki workflow.",
+    "developerName": "Yikong local Codex",
+    "category": "Productivity",
+    "capabilities": [
+      "source routing",
+      "Douyin workflow handoff",
+      "WeChat Channels share-link download",
+      "Markdown source artifact generation",
+      "LLMwiki handoff"
+    ],
+    "defaultPrompt": "Route this source into my LLMwiki workflow."
+  }
+}
