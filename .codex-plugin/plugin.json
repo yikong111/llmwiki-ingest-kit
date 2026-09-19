@@ -1,0 +1,22 @@
+{
+  "name": "llmwiki-ingest-kit",
+  "version": "0.1.0",
+  "description": "把视频/文章/PDF/播客摄入 Obsidian 知识库：自动转写、建页、挂双链，并用三道质量门拦住会把库堆烂的内容。",
+  "author": {
+    "name": "为道日损至于无为"
+  },
+  "homepage": "https://github.com/yikong111/llmwiki-ingest-kit",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LLMwiki Ingest Kit",
+    "shortDescription": "链接丢进去，自动转写建页挂双链，带三道质量门。",
+    "category": "Productivity",
+    "capabilities": [
+      "source routing",
+      "转写与建页",
+      "双链与索引",
+      "判重与质量门"
+    ],
+    "defaultPrompt": "把这个链接整合进我的库。"
+  }
+}

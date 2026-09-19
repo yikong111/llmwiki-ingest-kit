@@ -19,28 +19,39 @@
 
 ---
 
+## 安装（一个包，装一次）
+
+**下载** → [最新 Release](https://github.com/yikong111/llmwiki-ingest-kit/releases/latest) 里的 `llmwiki-ingest-kit.zip`
+
+解压后是一个完整插件，整个目录放进你的插件目录即可：
+
+- **Claude Code**：放进 `~/.claude/plugins/`（识别 `.claude-plugin/plugin.json`）
+- **Codex**：放进你的插件目录（识别 `.codex-plugin/plugin.json`）
+- **只想要 skill 也行**：把 `skills/` 下的四个目录直接丢进 agent 的 skills 目录
+
+然后两步：
+
+1. 在你的库根目录放一个 `AGENTS.md`，写清库结构（concepts / entities / sources / summaries / syntheses）。
+2. 对 agent 说：**「把这个链接整合进库」+ 链接**。路由会自己判断走哪条线。
+
+长视频想单独转写：`python scripts/extract_transcript.py <文件或链接>`
+
 ## 组成
 
 ```
+.claude-plugin/plugin.json   # Claude Code 插件清单
+.codex-plugin/plugin.json    # Codex 插件清单
 skills/
-  llmwiki-ingest/            # 主流程：建页、双链、索引、日志、三道质量门
-  llmwiki-douyin-ingest/     # 抖音/短视频前置采集，产出干净的 Markdown
-plugin/
-  skills/llmwiki-ingest-router/            # 来源路由：判断该走哪条线
-  skills/llmwiki-wechat-channels-ingest/   # 微信视频号
-  scripts/wechat_channels_adapter.py
-  tests/
+  llmwiki-ingest/                    # 主流程：建页、双链、索引、日志、三道质量门
+  llmwiki-ingest-router/             # 来源路由：判断该走哪条线
+  llmwiki-douyin-ingest/             # 抖音/短视频前置采集
+  llmwiki-wechat-channels-ingest/    # 微信视频号
 scripts/
-  extract_transcript.py      # 本地转写
-  douyin_ssr_bridge.py       # 抖音页面数据桥接
+  extract_transcript.py       # 本地转写
+  douyin_ssr_bridge.py        # 抖音页面数据桥接
+  wechat_channels_adapter.py  # 视频号适配
+tests/
 ```
-
-## 怎么用
-
-1. 把 `skills/` 下的目录放进你的 agent skills 目录（Claude Code / Codex 都行）。
-2. 在你的库根目录放一个 `AGENTS.md`，写清库结构（concepts / entities / sources / summaries / syntheses）。
-3. 对 agent 说：`把这个链接整合进库` + 链接。路由会自己判断走哪条线。
-4. 长视频先转写：`python scripts/extract_transcript.py <文件或链接>`。
 
 ## 三道质量门（这套东西真正的价值）
 
