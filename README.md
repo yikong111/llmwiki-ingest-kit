@@ -19,7 +19,35 @@
 
 ---
 
-## 安装（一个包，装一次）
+## 最省事的装法：把链接丢给你的 AI
+
+直接对你的 AI 说：
+
+> 装一下这个 https://github.com/yikong111/llmwiki-ingest-kit
+
+仓库里有 [`INSTALL.md`](INSTALL.md)，那是**写给 AI 看的**安装说明——判断你在用 Claude Code
+还是 Codex、装到哪个目录、装完还要补什么，它会自己照做并向你汇报。
+
+**Claude Code 用户**可以更直接，两条命令：
+
+```
+/plugin marketplace add yikong111/llmwiki-ingest-kit
+/plugin install llmwiki-ingest-kit
+```
+
+**一条命令装**（不想让 AI 动手的话）：
+
+```bash
+curl -sL https://raw.githubusercontent.com/yikong111/llmwiki-ingest-kit/main/install.sh | bash
+```
+
+```powershell
+irm https://raw.githubusercontent.com/yikong111/llmwiki-ingest-kit/main/install.ps1 | iex
+```
+
+脚本会自己找 `~/.claude` / `~/.codex` / `~/.agents/skills`，装完告诉你装到了哪。
+
+## 手动装（一个包，装一次）
 
 **下载** → [最新 Release](https://github.com/yikong111/llmwiki-ingest-kit/releases/latest) 里的 `llmwiki-ingest-kit.zip`
 

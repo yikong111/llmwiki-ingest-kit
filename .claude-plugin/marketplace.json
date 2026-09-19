@@ -1,0 +1,20 @@
+{
+  "name": "llmwiki-ingest-kit",
+  "description": "把视频/文章/PDF/播客摄入 Obsidian 知识库的一套 agent skills，重点是三道质量门：低价值跳过 / 判重按来源身份 / 一页至少一条入链。",
+  "owner": {
+    "name": "为道日损至于无为",
+    "url": "https://github.com/yikong111"
+  },
+  "plugins": [
+    {
+      "name": "llmwiki-ingest-kit",
+      "description": "丢一个链接进去（抖音 / 微信视频号 / B站 / 播客 / 文章 / PDF），自动转写、建页、挂双链、更新索引与日志。附三道质量门，拦住会把知识库堆烂的内容：低价值来源不建页、判重按来源身份而非文件名、一页至少一条入链。",
+      "author": {
+        "name": "为道日损至于无为"
+      },
+      "category": "productivity",
+      "keywords": ["obsidian", "知识管理", "第二大脑", "双链笔记", "读书笔记", "转写", "ingest"],
+      "source": "./"
+    }
+  ]
+}
